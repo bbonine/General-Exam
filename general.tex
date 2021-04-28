@@ -90,7 +90,8 @@ by comparing the behavior of structures at progressively higher redshifts.
 It has been well established that the majority of large galaxies contain a supermassive black hole (SMBH)
 at their center \citep{magorrian}. Many studies have found correlations between SMBH properties and properties of their 
 host galaxies, such as a correlation between SMBH mass and host galaxy bulge mass \citep{mcconnel} and the famous $M-\sigma$ relation that correlates SMBH mass with 
-the velocity dispersion of stars in the host galaxy \citep{gebhardt}. For this reason, studying SMBHs can give insight into the growth 
+the velocity dispersion of stars in the host galaxy \citep{gebhardt}. \citet{baes:2003} found evidence that this correlation extends further into the outer reaches of 
+galaxies, suggesting a relationship between the central SMBH and the surrounding dark matter halo. Evidently, studying the growth of SMBHs can give insight into the growth 
 and evolution of their host galaxies.  Whenever gas and dust within a galaxy make their way to the central SMBH, inter-particle interactions within the 
 in-falling material causes emission across a broad range of wavelengths. These ``active'' galactic nuclei (AGN) can 
 therefore be used as signposts for galaxy growth due to their incredible luminosity. 
@@ -104,9 +105,11 @@ or enhanced merger fractions of AGN compared to the field \citep{marian:2019}. T
 \section{Previous Work} 
 Due to the importance of clustering measurements in constraining AGN formation channels, many studies have previously explored the clustering properties of AGN. 
 A direct probe of the AGN environment is the two-point spatial correlation function, where redshift measurements for each AGN are
-combined with their angular positions on the sky to measure their three-dimensional clustering. Large area optical band redshift surveys such as the Sloan Digital Sky Survey (SDSS) 
-have allowed for precise measurements of the spatial clustering of optically bright luminous AGN  \citep{ross:2009}. 
-
+combined with their angular positions on the sky to measure their three-dimensional clustering. In the current $\Lambda$-CDM paradigm, ``cold'' dark matter underwent gravitational collapse 
+into virialized structures early in the history of the universe. As the universe expanded, matter began to cool and occupy the existing dark matter ``halos''. The most powerful aspect of the spatial correlation function is 
+its connection to the mass of these dark matter halos \citep{mo:1996}. By studying the spatial correlation function of AGN, one can thus probe the environment of typical AGN and place constraints on proposed AGN fueling modes \citep{krolewski:2015}. 
+ Large area optical band redshift surveys such as the Sloan Digital Sky Survey (SDSS) 
+have allowed for precise measurements of the spatial clustering of optically bright luminous AGN  \citep{ross:2009}.
 Because a large volume of redshift measurements are required to measure the spatial correlation function of a sample, many studies instead opt 
 to measure the \textit{angular} correlation function and deproject it using Limber's inversion \citep{limber} by making several assumptions about 
 the distribution of true AGN population. 
@@ -283,8 +286,7 @@ arises in a calculation with the real dataset will be physical.
     \includegraphics[scale = 0.8]{figs/corr_rand.png}
     \label{fig:corr_rand}
     \caption{Two-Point Angular Correlation Function evaluated between
-    two random catalogs. The result is mostly consistent with no correlation except 
-    on very small angular scales.}
+    two random catalogs. The result is mostly consistent with no correlation, as expected.}
 \end{figure}
 
 
@@ -294,7 +296,7 @@ After determining that our algorithm was preforming as expected, we repeat the c
 using the SACS AGN catalog as our dataset. Each field contains an average of 30 AGN, though we disregard fields 
 that contain less than two real or rand points. After calculating the weighted average correlation function,
 we use the software package \textit{Sherpa} \citep{sherpa} to fit a powerlaw to the measurement. We find a slope of 
-$\gamma = 2.1 \pm 0.52$ and a clustering amplitude of $\theta_0 = 8.24 \pm 2.21$ for the complete dataset. The clustering
+$\gamma = 2.07 \pm 0.087$ and a clustering amplitude of $\theta_0 = 8.18 \pm 3.11$ for the complete dataset. The clustering
 amplitude is consistent with the findings of  \citet{elyiv} while our slope more closely matches that of \citet{ebrero}, whose softband analysis
 featured a slightly larger AGN catalog than our own. 
 
@@ -318,8 +320,8 @@ and unobscured AGN are $f_{blue} = 0.53 , f_{red} = 0.47 $, respectively.
 Our procedure for investigating the color dependence of the angular correlation function is as follows:
 We construct a new random catalog following the original procedure, but this time generate two random images per field. The number of random sources in each image
 is the expected result from the procedure in section 4 multiplied by $f_{blue}$ and $f_{red}$ for the blue and red AGN, respectively. Next we repeat the correlation analysis
-described in Section 3 for the two subsamples separately. For the blue subsample, we find a powerlaw slope of $\gamma_b = 1.95 \pm 0.21$ and a clustering amplitude of $\theta_{0,b} = 9.00 \pm 11.25 $. For the 
-red AGN subsample, we measure $\gamma_r = 1.54 \pm 0.32 $ and $\theta_{0,r} = 0.82 \pm 2.94$ 
+described in Section 3 for the two subsamples separately. For the blue subsample, we find a powerlaw slope of $\gamma_b = 2.11 \pm 0.049$ and a clustering scale of $\theta_{0,b} = 28.65 \pm 8.35'' $. For the 
+red AGN subsample, we measure $\gamma_r = 2.16 \pm 0.058 $ and $\theta_{0,r} = 32.02 \pm 11.26$ .
 
 \begin{figure}[!h]
     \centering
@@ -456,7 +458,7 @@ red AGN subsample, we measure $\gamma_r = 1.54 \pm 0.32 $ and $\theta_{0,r} = 0.
     Where $ \bar f_{\nu,min}$ is the mean flux limit of our survey and $D_L$ is the luminosity distance to 
     a source at a redshift $z$.
      In the future we'll adopt more modern values for the AGN luminosity function, but for now we'll assume the same Luminosity and Density Evolution  (LADE) luminosity function used by \citet{koutoulidis} \citep{aird:2010}. 
-    A sample of the luminosity function (evaluated at a random redshift of z = 0.1) is shown below in Fig. 
+    A sample of the luminosity function (evaluated at a random redshift of z = 0.1) is shown below in Fig \ref{fig:lum_func}.
     
     \begin{figure}[!ht]
         \centering
@@ -471,19 +473,20 @@ red AGN subsample, we measure $\gamma_r = 1.54 \pm 0.32 $ and $\theta_{0,r} = 0.
         \includegraphics[scale = 1.2]{figs/z_dist.png}
         \label{fig:z_dist}
         \caption{The AGN redshift selection function of our sample  inferred by integrating the above luminosity function over all redshifts. 
-        The shape of our selection function matches that of \citet{ebrero}. }
+        The shape of our selection function matches that of the estimated selection function of \citet{ebrero} and is in reasonable agreement with 
+        the observed AGN redshift distribution of \citet{plionis:2018}.}
     \end{figure}
     
-    For our slope of $\gamma = 2.07$ and we find a spatial clustering length at 
-    $z = 0$ of $x_0 = 10.64 h^{-1} \  \text{Mpc}^{-1}$. We can find the clustering length at a particular redshift 
-     (in comoving coordinates) according to 
+    For our slope of $\gamma = 2.07$,we find a comoving clustering length at 
+    of $x_0 = 10.64 h^{-1} \  \text{Mpc}^{-1}$. Since Limber's Inversion is noramlized to the local universe (z=0), we can find the clustering length at a particular redshift 
+    (in comoving coordinates) according to 
     
     
     \begin{align}
         \label{eq:clustering_length}
         x_0(z) = x_0(0) \tilde D^{2+n/\gamma}(z) \tilde b^{2/\gamma}
     \end{align}
-    Normalizing our clustering length the mean of our redshift distribution in Fig. (\ref{fig:z_dist}), $(z \approx 0.75)$, we find a comoving clustering length 
+    Normalizing our clustering length to the mean of our redshift distribution in Fig. (\ref{fig:z_dist}), $(z \approx 0.75)$, we find a comoving clustering length 
     of $x_0 = 15.39 h^{-1} \text{Mpc}^{-1}$.
 
 
@@ -493,7 +496,7 @@ with other soft-band X-Ray surveys in the literature (see Fig. (\ref{fig:comp}))
 sits between the measurement of \cite{ebrero}, whose analysis featured a similarly sized dataset, and \cite{elyiv}. The 
 measured slope of our dataset agrees strongly with that of the slope found by \cite{ebrero} in the softband. When splitting sample but MIR color, we find similar values for the slope 
 of the angular correlation function for both obscured ang unobscured AGN. The best fit clustering amplitude is notably larger for the two subsamples compared to the complete sample 
-(but more in line with the larger amplitudes found by \citet{ebrero} in the soft band). The slopes and clustering amplitudes of the two subsamples are in close agreement at most angular scales.
+(but more in line with the larger amplitudes found by \citet{ebrero} in the soft band. The slopes and clustering amplitudes of the two subsamples are in close agreement at most angular scales.
 consistent with the findings of the hardness-ratio analysis of  \cite{ebrero} and unification models of AGN.
 Thus a separate metric for splitting the complete sample into obscured and unobscured AGN found no strong difference
 between the two subsamples' clustering properties.
@@ -522,7 +525,7 @@ in the clustering of these two populations for this unification scheme.
 
 
 Direct measurements of the clustering of optically selected AGN have found a physical clustering lengths on the order of $r_0 \approx 5.4 - 8.6 h^{-1} \text{Mpc}^{-1}$ \citep{akylas:2000,croom:2002,grazian:2004}. 
-Similar surveys of X-ray selected AGN have inferred a slightly higher spatial clustering length in the range of $r_0 \approx 7.5 - 9.8 h^{-1} \text{Mpc}^{-1}$ \citep{basilakos:2008,miyaji}. To compare our result to 
+Similar surveys of X-ray selected AGN have inferred a slightly higher spatial clustering length in the range of $r_0 \approx 7.5 - 9.8 h^{-1} \text{Mpc}^{-1}$ \citep{basilakos:2008,miyaji,plionis:2018}. To compare our result to 
 those reported in the literature, we'll express the clustering length in proper coordinates according to 
 \begin{align}
     \label{eq:prop_coord}
@@ -532,14 +535,15 @@ Our estimate of the comoving clustering length at $z = 0.75$ translates to a phy
 as well as the inferred spatial clustering length of \citet{ebrero}.
 \section{CONCLUSION}
 
-In this work we measured the two-point angular correlation function
+In this work we measured the average two-point angular correlation function
 for 22,000 X-ray selected AGN. Our dataset provides a bridge 
 between previous high depth narrow surveys and
 shallow wide-field soft-band x-ray surveys. We find an angular clustering 
 amplitude and slope consistent with previous results for the soft-band in the literature, 
 suggesting the clustering of AGN behaves as expected for the AGN population not sampled by previous surveys.
 We find no statistically significant difference in the clustering amplitude or 
-slope for the obscured or unobscured subsamples, consistent with unification models of AGN.
+slope for the obscured or unobscured subsamples, consistent with unification models of AGN. With the exception of large sample size of \citet{ebrero}, our analysis comprises one of the most tightly constrained measurements
+of the angular clustering of AGN to date.
 
 As a final demonstration of the utility of the angular correlation function, we deproject our measurement to find a clustering length consistent with the literature.
 Additional analysis prior to publication may include a comparison of the clustering 
@@ -556,7 +560,18 @@ the clustering properties of our sample as a long term goal.
 \bibliography{refs}
 
 
+\newpage
+\section*{APPENDIX}
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale = 0.8]{figs/sacs.png}
+    \label{fig:sacs}
+    \caption{The sky coverage of the 739 fields in SACS. In this work we evaluated the angular correlation function in each one of these fields
+    to infer the average angular correlation function in a region of the sky similar to each pointing above. The large sky coverage of this survey and its total area $(\approx 125^{\circ} )$ 
+    help to reduce bias introduced by only sampling an over-dense or under-dense region. Adapted from \citet{dai_2015}.
+    }
+\end{figure}
 
 \end{document}
 

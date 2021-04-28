@@ -20,6 +20,11 @@
 {Antonucci}, R.~R.~J., \& {Miller}, J.~S. 1985, \apj, 297, 621,
   \dodoi{10.1086/163559}
 
+\bibitem[{{Baes} {et~al.}(2003){Baes}, {Buyle}, {Hau}, \&
+  {Dejonghe}}]{baes:2003}
+{Baes}, M., {Buyle}, P., {Hau}, G. K.~T., \& {Dejonghe}, H. 2003, \mnras, 341,
+  L44, \dodoi{10.1046/j.1365-8711.2003.06680.x}
+
 \bibitem[{{Bardeen} {et~al.}(1986){Bardeen}, {Bond}, {Kaiser}, \&
   {Szalay}}]{bardeen}
 {Bardeen}, J.~M., {Bond}, J.~R., {Kaiser}, N., \& {Szalay}, A.~S. 1986, \apj,
@@ -127,6 +132,10 @@ Basilakos, S., Plionis, M., \& Ragone-Figueroa, C. 2008, The Astrophysical
 {Koutoulidis}, L., {Plionis}, M., {Georgantopoulos}, I., {et~al.} 2016, \aap,
   590, A23, \dodoi{10.1051/0004-6361/201527814}
 
+\bibitem[{{Krolewski} \& {Eisenstein}(2015)}]{krolewski:2015}
+{Krolewski}, A.~G., \& {Eisenstein}, D.~J. 2015, \apj, 803, 4,
+  \dodoi{10.1088/0004-637X/803/1/4}
+
 \bibitem[{{Lehmer} {et~al.}(2009){Lehmer}, {Alexander}, {Chapman}, {Smail},
   {Bauer}, {Brandt}, {Geach}, {Matsuda}, {Mullaney}, \& {Swinbank}}]{lehmer}
 {Lehmer}, B.~D., {Alexander}, D.~M., {Chapman}, S.~C., {et~al.} 2009, \mnras,
@@ -166,6 +175,10 @@ Basilakos, S., Plionis, M., \& Ragone-Figueroa, C. 2008, The Astrophysical
 {Miyaji}, T., {Krumpe}, M., {Coil}, A.~L., \& {Aceves}, H. 2011, \apj, 726, 83,
   \dodoi{10.1088/0004-637X/726/2/83}
 
+\bibitem[{{Mo} \& {White}(1996)}]{mo:1996}
+{Mo}, H.~J., \& {White}, S.~D.~M. 1996, \mnras, 282, 347,
+  \dodoi{10.1093/mnras/282.2.347}
+
 \bibitem[{{Netzer}(2015)}]{netzer:2015}
 {Netzer}, H. 2015, \araa, 53, 365, \dodoi{10.1146/annurev-astro-082214-122302}
 
@@ -176,6 +189,12 @@ Basilakos, S., Plionis, M., \& Ragone-Figueroa, C. 2008, The Astrophysical
 
 \bibitem[{{Peebles}(1980)}]{peebles:1980}
 {Peebles}, P.~J.~E. 1980, {The large-scale structure of the universe}
+
+\bibitem[{{Plionis} {et~al.}(2018){Plionis}, {Koutoulidis}, {Koulouridis},
+  {Moscardini}, {Lidman}, {Pierre}, {Adami}, {Chiappetti}, {Faccioli},
+  {Fotopoulou}, {Pacaud}, \& {Paltani}}]{plionis:2018}
+{Plionis}, M., {Koutoulidis}, L., {Koulouridis}, E., {et~al.} 2018, \aap, 620,
+  A17, \dodoi{10.1051/0004-6361/201832970}
 
 \bibitem[{{Ross} {et~al.}(2009){Ross}, {Shen}, {Strauss}, {Vanden Berk},
   {Connolly}, {Richards}, {Schneider}, {Weinberg}, {Hall}, {Bahcall}, \&
